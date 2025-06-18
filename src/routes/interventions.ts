@@ -158,7 +158,7 @@ router.post(
 	"/:interventionId/comments",
 	checkRole(["admin", "technicien_chef", "agent_terrain"]),
 	[body("texte").notEmpty().withMessage("Le texte du commentaire est requis")],
-	interventionsController.addCommentToIntervention
+	interventionsController.addDocumentToIntervention
 );
 
 router.post(
